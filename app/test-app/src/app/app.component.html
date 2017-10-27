@@ -1,3 +1,9 @@
 <h1>
   {{title}}
 </h1>
+<div *ngIf="!loading">
+  <p *ngFor="let popItem of popularItems">{{popItem.item}}</p>
+</div>
+<!-- <p *ngFor="let popItem of popularItems">{{popItem}}</p> -->
+
+<!-- <p>{{popularItems}}</p> -->
