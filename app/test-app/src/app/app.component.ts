@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { PopularThemeService } from './popular-theme-service/popular-theme.service';
+import { PopularItemComponent } from './popular-item/popular-item.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [PopularThemeService]
+  providers: [PopularThemeService, PopularItemComponent]
 })
 export class AppComponent {
   title = 'Popular Items';

@@ -1,6 +1,7 @@
 <h1>
   {{title}}
 </h1>
+<popular-item></popular-item>
 <div *ngIf="!loading">
   <p *ngFor="let popItem of popularItems">{{popItem.item}}</p>
 </div>
