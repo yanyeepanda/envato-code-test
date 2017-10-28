@@ -24,8 +24,8 @@
       </div>
       <div class="item-lists">
         <div *ngIf="!loading" >
+          <popular-item class="item-wrapper" *ngFor="let popItem of popularItems" [popularItem]="popItem"></popular-item>              
             <!-- <p *ngFor="let popItem of popularItems">{{popItem.item}}</p> -->
-            <popular-item *ngFor="let popItem of popularItems" [popularItem]="popItem"></popular-item>
         </div>
       </div>
       

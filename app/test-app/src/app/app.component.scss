@@ -42,6 +42,11 @@
 
     .item-lists{
         margin:auto;
+
+        .item-wrapper{
+            width: 420px;
+            float: left;
+        }
     }
 }
 
@@ -58,5 +63,9 @@
 @media screen and (min-width: 960px){
     .grab-them{
         width: 40%;
+    }
+
+    .item-lists{
+        width:840px;
     }
 };
