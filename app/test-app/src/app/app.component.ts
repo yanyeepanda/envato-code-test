@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { PopularThemeService } from './popular-theme-service/popular-theme.service';
-import { PopularItemComponent } from './popular-item/popular-item.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [PopularThemeService, PopularItemComponent]
+  providers: [PopularThemeService,]
 })
 export class AppComponent {
   title = 'Popular Items';
@@ -15,11 +14,10 @@ export class AppComponent {
 
   }
   someProperty:string = '';
-  popularItems={};
+  popularItems=[];
   private loading: boolean = true;
   
     ngOnInit() {
-      // console.log(this.popularTheme.cars);
   
       this.someProperty = this.popularTheme.myData();
 

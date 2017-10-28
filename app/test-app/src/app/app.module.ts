@@ -16,9 +16,6 @@ import { PopularItemComponent } from './popular-item/popular-item.component';
     FormsModule,
     HttpModule
   ],
-  exports: [
-    PopularItemComponent
-  ],
   providers: [],
   bootstrap: [AppComponent]
 })
