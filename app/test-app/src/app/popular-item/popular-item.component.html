@@ -1,7 +1,22 @@
-<p>
-  {{ this.popularItem.item }}
-</p>
 
-<p>
-  {{ this.popularItem.rating }}
-</p>
+
+
+<div class="popular-item" [ngClass]="{'yellow-bg':this.popularItem.rating == '5.0', 'grey-bg':this.popularItem.rating != '5.0' }">
+  <div class="item-logo">
+    <img [src]="this.popularItem.thumbnail">
+  </div> 
+  <div class="item-description">
+      <p class="name">
+        {{ this.popularItem.item }}
+      </p>
+      
+      <p class="rating">
+        Rating: {{ this.popularItem.rating }}
+      </p>
+
+      <span class="remove-btn">
+        Remove
+      </span>
+  </div>
+  
+</div>

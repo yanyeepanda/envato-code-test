@@ -1,1 +1,62 @@
 @import "../common/common";
+
+
+
+.top-bar{
+    background-color: #232323;
+    width:100%;
+    height: 48px;
+    line-height: 48px;
+
+    .logo{
+        margin-top: 10px;
+    }
+
+    .welcome{
+        float: right;
+        color: white;
+    }
+}
+
+.title{
+    background-color: $light-green;
+    width:100%;
+    height: 112px;
+    line-height: 112px;
+
+    h1{
+        color: $theme-green;
+        margin: 0;
+    }
+}
+
+.content{
+    width:100%;
+
+    .grab-them{
+        padding-top:60px;
+        padding-bottom: 50px;
+        margin:auto;
+        text-align: center;
+    }
+
+    .item-lists{
+        margin:auto;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .grab-them{
+        width: 90%;
+    }
+
+    .item-lists{
+        width:420px;
+    }
+};
+
+@media screen and (min-width: 960px){
+    .grab-them{
+        width: 40%;
+    }
+};

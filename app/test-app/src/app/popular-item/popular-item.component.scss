@@ -1,0 +1,50 @@
+@import "../../common/common";
+
+.popular-item{
+    border-radius: 3px;
+    max-width: 380px;
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+
+    p{
+        margin-bottom:8px;
+        margin-top:0;
+        font-weight: 700;
+        
+    }
+
+    .name{
+        font-size: 1.1rem;
+    }
+
+    .rating{
+        color: grey;
+    }
+
+    &.yellow-bg{
+        background-color: $bg-yellow;
+    }
+    &.grey-bg{
+        background-color: $bg-grey;
+    }
+
+    .item-logo{
+        img{
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .item-description{
+        position: absolute;
+        top: 20px;
+        left: 120px;
+
+        .remove-btn{
+           cursor: pointer;
+           color: red;
+           font-weight: 700;
+        }
+    }
+}

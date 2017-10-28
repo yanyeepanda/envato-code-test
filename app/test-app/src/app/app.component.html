@@ -1,11 +1,35 @@
-<h1>
-  {{ title }}
-</h1>
-
-<div *ngIf="!loading">
-  <!-- <p *ngFor="let popItem of popularItems">{{popItem.item}}</p> -->
-  <popular-item *ngFor="let popItem of popularItems" [popularItem]="popItem"></popular-item>
-</div>
 
 
+
+  <div class="top-bar">
+    <div class="container">
+      <img class="logo" src="../assets/logo.png">
+      <span class="welcome">Welcome back, <strong>joeblogs54!</strong> </span>
+    </div>
+  </div>
+
+  <div class="title">
+    <div class="container">
+        <h1>
+            {{ title }}
+        </h1>
+    </div>
+
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="grab-them">
+          Here are this week’s most popular themes & templates from ThemeForest! Grab ‘em while they’re hot!
+      </div>
+      <div class="item-lists">
+        <div *ngIf="!loading" >
+            <!-- <p *ngFor="let popItem of popularItems">{{popItem.item}}</p> -->
+            <popular-item *ngFor="let popItem of popularItems" [popularItem]="popItem"></popular-item>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
 <!-- <p>{{popularItems}}</p> -->

@@ -4,5 +4,11 @@ $desktop-width: 1400px;
 $bg-yellow: #f6f2ca;
 $bg-grey: #e7e7e7;
 
-$theme-green:#90aa6f;
+$theme-green:#537b20;
 $light-green:#f6f9f3;
+
+.container{
+    max-width: $desktop-width;
+    margin: auto;
+}
+
