@@ -24,7 +24,7 @@ class PopularItem {
 @Component({
   selector: 'popular-item',
   templateUrl: './popular-item.component.html',
-  styleUrls: ['./popular-item.component.css']
+  styleUrls: ['./popular-item.component.scss']
 })
 
 export class PopularItemComponent implements OnInit {
