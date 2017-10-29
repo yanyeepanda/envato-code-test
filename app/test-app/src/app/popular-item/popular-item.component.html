@@ -1,7 +1,5 @@
 
-
-
-<div class="popular-item" [ngClass]="{'yellow-bg':this.popularItem.rating == '5.0', 'grey-bg':this.popularItem.rating != '5.0' }">
+<div class="popular-item" *ngIf="this.popularItem" [ngClass]="{'yellow-bg':this.popularItem.rating == '5.0', 'grey-bg':this.popularItem.rating != '5.0' }">
   <div class="item-logo">
     <img [src]="this.popularItem.thumbnail">
   </div> 

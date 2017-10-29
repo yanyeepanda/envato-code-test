@@ -29,7 +29,7 @@ class PopularItem {
 
 export class PopularItemComponent implements OnInit {
 
-  @Input() popularItem: PopularItem;
+  @Input() public popularItem: PopularItem;
   @Output() removeClick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
