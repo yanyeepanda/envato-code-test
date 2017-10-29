@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 // import { PopItem } from './popular-item';
 
@@ -28,15 +28,18 @@ class PopularItem {
 })
 
 export class PopularItemComponent implements OnInit {
-  test:string;
-
-  constructor() {
-    this.test = "item works!";
-  }
 
   @Input() popularItem: PopularItem;
+  @Output() removeClick: EventEmitter<string> = new EventEmitter<string>();
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  remove(event, itemId){
+    this.removeClick.emit(itemId);
   }
 
 }

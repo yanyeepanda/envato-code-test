@@ -1,8 +1,8 @@
 @import "../../common/common";
 
 .popular-item{
-    border-radius: 3px;
-    max-width: 380px;
+    border-radius: 2px;
+    max-width: 420px;
     margin: 20px;
     padding: 20px;
     position: relative;
@@ -16,6 +16,7 @@
 
     .name{
         font-size: 1.1rem;
+        color: $theme-blue;
     }
 
     .rating{

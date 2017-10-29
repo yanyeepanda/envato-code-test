@@ -14,19 +14,10 @@ export class PopularThemeService {
 
   popThemeUrl = 'http://marketplace.envato.com/api/edge/popular:themeforest.json';
 
-  // cars = [
-  //   'Ford','Chevrolet','Buick'
-  // ];
 
-
-  myData() {
-    return 'This is my data!';
-  }
-
-  fetchPopularItems() {
-    console.log(this.popThemeUrl);
-    
-    this.popularItems = this.http.get(this.popThemeUrl).map(
+  fetchPopularItems() {    
+    this.popularItems = this.http.get(this.popThemeUrl)
+    .map(
       res => res.json()
     );
 

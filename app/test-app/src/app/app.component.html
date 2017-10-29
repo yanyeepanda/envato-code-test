@@ -4,7 +4,10 @@
   <div class="top-bar">
     <div class="container">
       <img class="logo" src="../assets/logo.png">
-      <span class="welcome">Welcome back, <strong>joeblogs54!</strong> </span>
+      <div class="welcome">
+          <span>Welcome back, <strong>joeblogs54!</strong> </span>
+      </div>
+      <!-- <span class="welcome">Welcome back, <strong>joeblogs54!</strong> </span> -->
     </div>
   </div>
 
@@ -24,7 +27,10 @@
       </div>
       <div class="item-lists">
         <div *ngIf="!loading" >
-          <popular-item class="item-wrapper" *ngFor="let popItem of popularItems" [popularItem]="popItem"></popular-item>              
+          <popular-item class="item-wrapper" 
+                        *ngFor="let popItem of popularItems" 
+                        [popularItem]="popItem" 
+                        (removeClick)="removeItem($event)"></popular-item>              
             <!-- <p *ngFor="let popItem of popularItems">{{popItem.item}}</p> -->
         </div>
       </div>

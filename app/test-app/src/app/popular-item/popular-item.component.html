@@ -14,7 +14,7 @@
         Rating: {{ this.popularItem.rating }}
       </p>
 
-      <span class="remove-btn">
+      <span class="remove-btn" (click)="remove($event, this.popularItem.id)">
         Remove
       </span>
   </div>

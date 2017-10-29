@@ -13,20 +13,32 @@ export class AppComponent {
   constructor(private popularTheme:PopularThemeService){
 
   }
-  someProperty:string = '';
+
   popularItems=[];
   private loading: boolean = true;
-  
-    ngOnInit() {
-  
-      this.someProperty = this.popularTheme.myData();
 
+  removeItem = (itemId) => {
+    console.log("remove", itemId);
+    
+    var index;
+    for (var n in this.popularItems){
+      if (this.popularItems[n].id == itemId){
+        index = n;
+      }
+    }
+
+    this.popularItems.splice(index, 1);
+  }
+
+    ngOnInit() {
       this.loading = true;
       this.popularTheme.fetchPopularItems().subscribe(data => {
         this.loading = false;
         this.popularItems = data.popular.items_last_week;
-        console.log(data.popular.items_last_week);
-      });
-      // console.log(this.popularTheme.fetchPopularItems());
-    }
+      })
+      ,error =>{
+        console.log(error);
+      };
+    };
+
 }
