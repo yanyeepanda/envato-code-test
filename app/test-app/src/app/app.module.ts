@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PopularItemComponent } from './popular-item/popular-item.component';
+import { PopularThemeService } from 'app/popular-theme-service/popular-theme.service';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PopularItemComponent } from './popular-item/popular-item.component';
     FormsModule,
     HttpModule
   ],
+  providers: [PopularThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

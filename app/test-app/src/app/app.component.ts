@@ -5,14 +5,13 @@ import { PopularThemeService } from './popular-theme-service/popular-theme.servi
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [PopularThemeService]
 })
 export class AppComponent {
   title = 'Popular Items';
   popularItems:any;
   private loading: boolean = true;
 
-  constructor(private popularTheme:PopularThemeService){
+  constructor(public popularTheme:PopularThemeService){
   }
 
   ngOnInit() {
@@ -20,9 +19,7 @@ export class AppComponent {
     this.fetchItems();
   };
 
-  removeItem = (itemId) => {
-    console.log("remove", itemId);
-    
+  removeItem = (itemId) => {    
     var index;
     for (var n in this.popularItems){
       if (this.popularItems[n].id == itemId){
@@ -34,6 +31,7 @@ export class AppComponent {
   }
 
   fetchItems = () => {
+    console.log(this.popularTheme.fetchPopularItems());
     this.popularTheme.fetchPopularItems().subscribe(data => {
       this.loading = false;
       this.popularItems = data.popular.items_last_week;
