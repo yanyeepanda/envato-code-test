@@ -28,9 +28,9 @@ We've also included a very basic test runner (see the Testing requirement below)
 
 - Clicking each item's `remove` link should remove it from the list (purely client side, this doesn't need to be communicated to the server or maintained across page reloads).
 
-- All source code should go in the `app` directory. The grunt task (or your alternative) should build a production-ready version of your app into the `build` directory. Don't commit the built files, just provide instructions for us to build it. 
+- All source code should go in the `app` directory. The grunt task (or your alternative) should build a production-ready version of your app into the `build` directory. Don't commit the built files, just provide instructions for us to build it.
 
-- Where appropriate, provide unit tests for your JavaScript in the `test` directory. We've provided a very basic test runner, but feel free to use another testing framework. 
+- Where appropriate, provide unit tests for your JavaScript in the `test` directory. We've provided a very basic test runner, but feel free to use another testing framework.
 
 ## What We Care About
 
@@ -65,3 +65,26 @@ tar -czvf firstname_lastname.tar.gz .
 ```
 
 Then email the generated tar.gz file back to the person that sent you the test.
+
+
+## Run the app
+
+- Setup
+  1. NodeJS (7.* recommended)
+  2. Angular CLI (RC2 or later)
+  ```
+  npm install -g @angular/cli
+  ```
+- Start server
+
+  go to test-app/
+  ```
+  ng serve
+  ```
+  check on http://localhost:4200/
+
+- Unit test
+
+  ```
+  ng test
+  ```

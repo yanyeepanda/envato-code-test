@@ -4,14 +4,14 @@
     border-radius: 2px;
     max-width: 420px;
     margin: 20px;
-    padding: 20px;
+    padding: 16px;
     position: relative;
 
     p{
-        margin-bottom:8px;
+        margin-bottom:6px;
         margin-top:0;
-        font-weight: 700;
-        
+        font-weight: bold;
+        width: 264px;
     }
 
     .name{
@@ -21,6 +21,7 @@
 
     .rating{
         color: grey;
+        font-size: 0.9rem;
     }
 
     &.yellow-bg{
@@ -46,6 +47,7 @@
            cursor: pointer;
            color: red;
            font-weight: 700;
+           font-size: 0.9rem;
         }
     }
 }

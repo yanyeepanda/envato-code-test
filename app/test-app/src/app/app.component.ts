@@ -5,17 +5,20 @@ import { PopularThemeService } from './popular-theme-service/popular-theme.servi
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [PopularThemeService,]
+  providers: [PopularThemeService]
 })
 export class AppComponent {
   title = 'Popular Items';
+  popularItems:any;
+  private loading: boolean = true;
 
   constructor(private popularTheme:PopularThemeService){
-
   }
 
-  popularItems=[];
-  private loading: boolean = true;
+  ngOnInit() {
+    this.loading = true;
+    this.fetchItems();
+  };
 
   removeItem = (itemId) => {
     console.log("remove", itemId);
@@ -30,15 +33,20 @@ export class AppComponent {
     this.popularItems.splice(index, 1);
   }
 
-    ngOnInit() {
-      this.loading = true;
-      this.popularTheme.fetchPopularItems().subscribe(data => {
-        this.loading = false;
-        this.popularItems = data.popular.items_last_week;
-      })
-      ,error =>{
-        console.log(error);
-      };
+  fetchItems = () => {
+    this.popularTheme.fetchPopularItems().subscribe(data => {
+      this.loading = false;
+      this.popularItems = data.popular.items_last_week;
+      for (var i in this.popularItems){
+        if (this.popularItems[i].item.length > 50){
+          var tempItemName = this.popularItems[i].item.substr(0,50) + "...";
+          this.popularItems[i].item = tempItemName;
+        } 
+      }
+    })
+    ,error =>{
+      console.log(error);
     };
+  }
 
 }
