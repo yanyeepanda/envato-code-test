@@ -72,7 +72,7 @@
 };
 
 
-@media screen and (min-width: 516px){
+@media screen and (min-width: $tablet-width){
     .welcome{
         float: right;
     }
@@ -81,7 +81,7 @@
     }
 }
 
-@media screen and (max-width: 515px){
+@media screen and (max-width: $tablet-width){
     .welcome{
         float: left;
     }
